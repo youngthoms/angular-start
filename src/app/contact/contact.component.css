@@ -1,0 +1,13 @@
+.red {
+  background-color : red;
+}
+
+.green {
+  background-color : green;
+}
+
+div {
+  border-style: solid;
+  border-width: 2px;
+  margin: 8px;
+}

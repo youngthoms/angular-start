@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactService } from './contact.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hello';
+  contacts!:any;
+  constructor(private contactService: ContactService) {
+    this.contactService = contactService;
+  }
+
+  ngOnInit() {
+    this.contacts = this.contactService.getContacts();
+  }
+
 }
